@@ -1,0 +1,44 @@
+name: check
+
+on:
+  push:
+    branches:
+      - main
+      - edge
+      - beta
+      - stable
+  pull_request:
+  merge_group:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        forklift-version: [0.8.0-alpha.2]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Forklift
+        uses: PlanktoScope/setup-forklift@v1
+        with:
+          version: ${{ matrix.forklift-version }}
+
+      - name: Cache Forklift pallet requirements
+        run: |
+          forklift dev plt cache-plt
+          forklift dev plt cache-repo
+
+      - name: Run Forklift checks
+        run: forklift dev plt check
+
+      - name: Make Forklift deployment plan
+        run: forklift dev plt plan
+
+      - name: Try to stage the pallet
+        run: forklift dev plt stage

@@ -1,0 +1,4 @@
+package: github.com/forklift-run/pallet-example-layered/packages/simple-demo
+features:
+  - hello
+disabled: false

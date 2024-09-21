@@ -1,0 +1,4 @@
+package: github.com/forklift-run/pallet-example-layered/packages/caddy-ingress
+features:
+  - service-proxy
+disabled: false

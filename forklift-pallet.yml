@@ -1,0 +1,6 @@
+forklift-version: v0.8.0-alpha.2
+
+pallet:
+  path: github.com/forklift-run/pallet-example-repackaged
+  description: Example of importing a package modified via Forklift pallet layering
+  readme-file: README.md
