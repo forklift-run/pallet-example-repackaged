@@ -1,13 +1,11 @@
 # pallet-example-repackaged
-A simple "hello-world" Forklift pallet illustrating use of packages from repositories constructed
-as layered pallets.
+A simple "hello-world" Forklift pallet illustrating use of packages from layered pallets.
 
 ## Introduction
 
 pallet-example-repackaged is a [Forklift](https://github.com/PlanktoScope/forklift) pallet which
 deploys packages provided by
-[github.com/forklift-run/pallet-example-layering](https://github.com/forklift-run/pallet-example-layered)
-as a repository.
+[github.com/forklift-run/pallet-example-layering](https://github.com/forklift-run/pallet-example-layered).
 Specifically, this pallet adds a simple demo app.
 
 ## Usage
@@ -62,8 +60,8 @@ This pallet will bring up a web server at port 80.
 ### Forking
 
 To make your own copy of this repository for experimentation, you should fork this repository to a
-new repository. Then, update the `path` fields of the `forklift-pallet.yml` and
-`forklift-repository.yml` files to match the path of your new repository.
+new repository. Then, update the `path` fields of the `forklift-pallet.yml` file to match the path
+of your new pallet.
 
 ## Licensing
 

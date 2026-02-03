@@ -1,4 +1,4 @@
-forklift-version: v0.8.0-alpha.2
+forklift-version: v0.9.0-alpha.1
 
 pallet:
   path: github.com/forklift-run/pallet-example-repackaged
